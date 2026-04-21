@@ -12,7 +12,11 @@ const deleteTask = (event) => {
     taskListEl.removeChild(taskElementToDelete);
 }
 
-const addNewTask = () => {
+const addNewTask = () => { 
+
+  // guard clause
+  if(inputTaskEl.value == "") return;
+
   const newTask = document.createElement(`div`);
   newTask.id = "task-" + counter;
   newTask.classList =
